@@ -1,0 +1,22 @@
+package com.mphasis.secondspringapp;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.mphasis.secondspringapp.service.GreetService;
+
+@Configuration
+@ComponentScan(basePackages= {"com.mphasis.secondspringapp"})
+public class SpringConfig {
+
+
+
+
+
+
+
+
+
+
+}

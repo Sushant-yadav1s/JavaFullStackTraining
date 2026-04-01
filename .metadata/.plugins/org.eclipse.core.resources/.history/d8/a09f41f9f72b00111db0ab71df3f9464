@@ -1,0 +1,11 @@
+package com.mphasis.firstspringapp;
+
+import com.mphasis.firstspringapp.service.GreetService;
+
+public class MainAppGreetService {
+public static void main(String[] args) {
+	GreetService gs=new GreetService();
+	gs.setMessage("Hello mphasis");
+	gs.greet();
+}
+}

@@ -1,0 +1,7 @@
+package com.mphasis.firstspringapp.service;
+
+public class SMSService {
+public void sendSMS() {
+	
+}
+}

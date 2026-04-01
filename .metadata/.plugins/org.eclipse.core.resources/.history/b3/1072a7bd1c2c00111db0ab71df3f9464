@@ -1,0 +1,7 @@
+package com.mphasis.firstspringapp;
+
+public class MainAppStudent {
+public static void main(String[] args) {
+	
+}
+}

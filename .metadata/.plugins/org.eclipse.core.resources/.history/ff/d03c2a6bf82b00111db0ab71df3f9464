@@ -1,0 +1,15 @@
+package com.mphasis.firstspringapp;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.mphasis.firstspringapp.service.GreetService;
+
+public class MainAppGreetService {
+public static void main(String[] args) {
+	ClassPathXmlApplicationContext container=new ClassPathXmlApplicationContext("spring-config.xml");
+	GreetService gs=container.getBean("greetService",GreetService.class);
+	
+	
+	
+}
+}

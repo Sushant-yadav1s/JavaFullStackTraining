@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="greetService" class="com.mphasis.firstspringapp.service.GreetService" scope="singleton" init-method="init" destroy-method="destroy" lazy-init="true">  
+
+
+<constructor-arg value="hello spring boot"></constructor-arg>
+	</bean>
+
+	<bean id="mailService" class="com.mphasis.firstspringapp.service.MailServerConfig" scope="singleton"  lazy-init="true">  
+
+
+<constructor-arg type="hello ip "></constructor-arg>
+<constructor-arg type="hello login "></constructor-arg>
+<constructor-arg type="hello token "></constructor-arg>
+	</bean>
+
+	<!-- more bean definitions go here -->
+
+</beans>

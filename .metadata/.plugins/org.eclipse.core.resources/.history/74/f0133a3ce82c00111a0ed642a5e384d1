@@ -1,0 +1,18 @@
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.mphasis.secondspringapp.service.AppConfig;
+import com.mphasis.secondspringapp.service.Order;
+
+public class MainApp {
+    public static void main(String[] args) {
+
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+
+        Order order = context.getBean(Order.class);
+
+        System.out.println(order.getOrderId());
+        System.out.println(order.getPaymentService().processPayment(500));
+    }
+}

@@ -1,0 +1,17 @@
+package com.mphasis.secondspringapp;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.mphasis.secondspringapp.service.AppConfig;
+import com.mphasis.secondspringapp.service.Order;
+
+public class MainAppConfig {
+    public static void main(String[] args) {
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        Order order = ctx.getBean(Order.class);
+
+        order.displayOrder();   // Only this line prints output
+    }
+}

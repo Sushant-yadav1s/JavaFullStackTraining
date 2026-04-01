@@ -1,0 +1,27 @@
+package com.mphasis.firstspringapp;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.mphasis.firstspringapp.service.MailServerConfig;
+import com.mphasis.firstspringapp.service.OrderService;
+
+public class MainAppOrder {
+	
+	
+	
+	public static void main(String[] args) {
+		
+	
+	ClassPathXmlApplicationContext container=new ClassPathXmlApplicationContext("spring-config.xml");
+//	GreetService greetService=container.getBean("greetService",GreetService.class);
+//	
+//	greetService.greet();
+	OrderService mk=container.getBean("orderService",OrderService.class);
+	mk.placeOrder();
+	
+	container.close();
+	
+	container.registerShutdownHook();
+	
+}
+}

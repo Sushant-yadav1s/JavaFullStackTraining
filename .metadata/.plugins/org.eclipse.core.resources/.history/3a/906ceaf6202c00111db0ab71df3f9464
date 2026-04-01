@@ -1,0 +1,25 @@
+package com.mphasis.firstspringapp;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.mphasis.firstspringapp.service.CarService;
+import com.mphasis.firstspringapp.service.EngineService;
+import com.mphasis.firstspringapp.service.OrderService;
+
+public class MainAppCar {
+public static void main(String[] args) {
+	ClassPathXmlApplicationContext container=new ClassPathXmlApplicationContext("spring-config.xml");
+//	GreetService greetService=container.getBean("greetService",GreetService.class);
+//	
+//	greetService.greet();
+	EngineService engineService=container.getBean("engineService",EngineService.class);
+	engineService.display();
+
+CarService car = (CarService) container.getBean("carService");
+        System.out.println(car);
+
+	container.close();
+	
+	container.registerShutdownHook();
+}
+}

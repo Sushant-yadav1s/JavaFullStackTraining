@@ -1,0 +1,31 @@
+package com.mphasis.secondspringapp;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.mphasis.secondspringapp.service.GreetService;
+import com.mphasis.secondspringapp.service.Order;
+
+public class MainApp {
+public static void main(String[] args) {
+	AnnotationConfigApplicationContext container =new AnnotationConfigApplicationContext(SpringConfig.class);
+
+
+
+
+//	GreetService greetService=container.getBean("greetService",GreetService.class);
+//
+//
+//
+//
+//
+//	greetService.greet();
+
+    AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(MainAppConfig.class);
+
+    Order order = ctx.getBean(Order.class);
+
+    order.displayOrder();   // Only this line prints output
+
+	container.close();
+}
+}

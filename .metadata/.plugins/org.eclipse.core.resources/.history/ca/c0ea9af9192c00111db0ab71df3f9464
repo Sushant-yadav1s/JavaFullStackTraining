@@ -1,0 +1,10 @@
+package com.mphasis.firstspringapp.service;
+
+import org.springframework.stereotype.Service;
+
+@Service("smsService")
+public class SMSService {
+public void sendSMS() {
+	System.out.println("Sms sent");
+}
+}

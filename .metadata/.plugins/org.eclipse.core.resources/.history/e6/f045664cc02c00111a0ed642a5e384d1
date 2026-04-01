@@ -1,0 +1,50 @@
+package com.mphasis.secondspringapp.service;
+
+import org.springframework.stereotype.Component;
+
+@Component("mailServerConfig")
+public class MailServerConfig {
+private String io="192.168.12.3";
+private String login="tom";
+private String tokn="XRT123";
+
+
+public MailServerConfig() {
+	
+}
+
+
+public String getIo() {
+	return io;
+}
+
+
+public void setIo(String io) {
+	this.io = io;
+}
+
+
+public String getLogin() {
+	return login;
+}
+
+
+public void setLogin(String login) {
+	this.login = login;
+}
+
+
+public String getTokn() {
+	return tokn;
+}
+
+
+public void setTokn(String tokn) {
+	this.tokn = tokn;
+}
+
+
+
+
+
+}

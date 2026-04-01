@@ -1,0 +1,15 @@
+package com.mphasis.firstspringapp.service;
+
+public class MailServerConfig {
+	private String id;
+	private String login;
+	private String token;
+	public MailServerConfig(String id, String login, String token) {
+		super();
+		this.id = id;
+		this.login = login;
+		this.token = token;
+	}
+	
+
+}

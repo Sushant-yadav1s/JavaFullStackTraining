@@ -1,0 +1,27 @@
+package com.mphasis.secondspringapp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Order {
+
+    private final PaymentService paymentService;
+    private final String orderId;
+
+    // Constructor Injection (best practice)
+    @Autowired
+    public Order(PaymentService paymentService) {
+        this.paymentService = paymentService;
+        this.orderId = "ORD1001";
+    }
+
+    public void displayOrder() {
+        System.out.println("Order ID: " + orderId);
+        System.out.println(paymentService.processPayment(500.00));
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+}

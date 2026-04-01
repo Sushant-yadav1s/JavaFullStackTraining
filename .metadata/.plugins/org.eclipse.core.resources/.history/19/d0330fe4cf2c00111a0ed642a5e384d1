@@ -1,0 +1,5 @@
+package com.mphasis.secondspringapp.aspect;
+
+public class LoggingAspect {
+
+}
